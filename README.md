@@ -1,7 +1,7 @@
 ### 💳 HBank – Banco Digital Fictício
 
 ![Java](https://img.shields.io/badge/Java-21-blue?logo=java)
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.1-green?logo=springboot)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.4-green?logo=springboot)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue?logo=postgresql)
 ![Docker](https://img.shields.io/badge/Docker-Orchestrator-blue?logo=docker)
 ![JUnit 5](https://img.shields.io/badge/JUnit_5-Testing-red?logo=java)
@@ -28,7 +28,7 @@
 - Spring Web, Spring Data JPA, Spring Security + JWT
 - Testes com JUnit 5 + Mockito (padrão BDD)
 - Banco de dados relacional (PostgreSQL)
-- Mensageria com RabbitMQ (ou alternativa)
+- Mensageria com RabbitMQ
 - Docker e Docker Compose para orquestração
 - Swagger para documentação de APIs
 
