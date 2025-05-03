@@ -6,16 +6,14 @@
 .mvn/
 !mvn/wrapper/maven-wrapper.jar
 
-# VS Code
+# IDEs
 .vscode/
-
-# IntelliJ IDEA
 .idea/
 *.iml
 *.ipr
 *.iws
 
-# Eclipse / Spring Tool Suite (STS)
+# Eclipse / STS
 .apt_generated/
 .classpath
 .factorypath
@@ -36,3 +34,25 @@
 
 # Logs
 *.log
+
+# Arquivos compilados
+*.class
+
+# BlueJ
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Arquivos empacotados
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# JVM crash logs
+hs_err_pid*
+replay_pid*
