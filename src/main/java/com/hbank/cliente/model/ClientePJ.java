@@ -34,10 +34,8 @@ public class ClientePJ extends Cliente {
     @NotNull
     private String uf;
 
-    public ClientePJ() {
-    }
-
-    public ClientePJ(String razaoSocial, String nomeFantasia, String cnpj, String inscricaoEstadual) {
+    public ClientePJ(String razaoSocial, String nomeFantasia, String cnpj, String inscricaoEstadual, String uf,
+                     String telefone, String email, String senha, Endereco endereco) {
         super();
         this.razaoSocial = razaoSocial;
         this.nomeFantasia = nomeFantasia;
@@ -47,10 +45,18 @@ public class ClientePJ extends Cliente {
 
         validarIE(inscricaoEstadual, uf);
         this.inscricaoEstadual = inscricaoEstadual;
+        this.uf = uf;
+        setTelefone(telefone);
+        setEmail(email);
+        setSenha(senha);
+        setEndereco(endereco);
     }
 
     private void validarCNPJ(String cnpj) {
-        if (!new CNPJValidator().invalidMessagesFor(cnpj).isEmpty()) {
+        CNPJValidator validator = new CNPJValidator();
+        try {
+            validator.assertValid(cnpj);
+        } catch (InvalidStateException e) {
             throw new IllegalArgumentException("CNPJ inválido");
         }
     }
@@ -114,7 +120,6 @@ public class ClientePJ extends Cliente {
                 "\n   endereco: " + getEndereco() +
                 "\n   statusCliente: " + getStatusCliente() +
                 "\n   dataCadastro: " + getDataCadastro() +
-                "\n   ultimoAcesso: " + getUltimoAcesso() +
                 "\n   razaoSocial: " + razaoSocial +
                 "\n   nomeFantasia: " + nomeFantasia +
                 "\n   cnpj: " + cnpj +

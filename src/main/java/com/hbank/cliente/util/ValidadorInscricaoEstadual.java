@@ -1,6 +1,5 @@
 package com.hbank.cliente.util;
 
-import br.com.caelum.stella.validation.InvalidStateException;
 import br.com.caelum.stella.validation.Validator;
 import br.com.caelum.stella.validation.ie.*;
 
@@ -14,11 +13,7 @@ public class ValidadorInscricaoEstadual {
         if (validador == null) {
             throw new IllegalArgumentException("UF não suportada: " + uf);
         }
-
-        try {
-            validador.assertValid(ie);
-        } catch (InvalidStateException e) {
-        }
+        validador.assertValid(ie);
     }
 
     private static final Map<String, Validator<String>> VALIDADORES = Map.ofEntries(

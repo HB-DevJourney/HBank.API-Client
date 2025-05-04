@@ -40,11 +40,9 @@ public class ClientePF extends Cliente {
     @NotNull
     private String nacionalidade;
 
-    public ClientePF() {
-    }
-
     public ClientePF(String nome, String sobrenome, String cpf, Character sexo,
-                     LocalDateTime dataNascimento, String nacionalidade) {
+                     LocalDateTime dataNascimento, String nacionalidade,
+                     String telefone, String email, String senha, Endereco endereco) {
         super();
         this.nome = nome;
         this.sobrenome = sobrenome;
@@ -55,6 +53,10 @@ public class ClientePF extends Cliente {
         this.sexo = sexo;
         this.dataNascimento = dataNascimento;
         this.nacionalidade = nacionalidade;
+        setTelefone(telefone);
+        setEmail(email);
+        setSenha(senha);
+        setEndereco(endereco);
     }
 
     private void validarCPF(String cpf) {
@@ -116,19 +118,18 @@ public class ClientePF extends Cliente {
         return "\nClientePF {" +
                 "\n   id: " + getId() +
                 "\n   codigoCliente: " + getCodigoCliente() +
-                "\n   email: " + getEmail() +
-                "\n   senha: " + getSenha() +
-                "\n   telefone: " + getTelefone() +
-                "\n   endereco: " + getEndereco() +
-                "\n   statusCliente: " + getStatusCliente() +
-                "\n   dataCadastro: " + getDataCadastro() +
-                "\n   ultimoAcesso: " + getUltimoAcesso() +
                 "\n   nome: " + nome +
                 "\n   sobrenome: " + sobrenome +
                 "\n   cpf: " + cpf +
                 "\n   sexo: " + sexo +
                 "\n   dataNascimento: " + dataNascimento +
                 "\n   nacionalidade: " + nacionalidade +
+                "\n   telefone: " + getTelefone() +
+                "\n   statusCliente: " + getStatusCliente() +
+                "\n   dataCadastro: " + getDataCadastro() +
+                "\n   email: " + getEmail() +
+                "\n   senha: " + getSenha() +
+                "\n   endereco: " + getEndereco() +
                 "\n}";
     }
 }

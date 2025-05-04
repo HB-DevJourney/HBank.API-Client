@@ -45,9 +45,6 @@ public abstract class Cliente {
     @JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss")
     private LocalDateTime dataCadastro;
 
-    @JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss")
-    private LocalDateTime ultimoAcesso;
-
     @PrePersist
     public void prePersist() {
         this.dataCadastro = LocalDateTime.now();
@@ -124,15 +121,6 @@ public abstract class Cliente {
     public void setDataCadastro(LocalDateTime dataCadastro) {
         this.dataCadastro = dataCadastro;
     }
-
-    public LocalDateTime getUltimoAcesso() {
-        return ultimoAcesso;
-    }
-
-    public void setUltimoAcesso(LocalDateTime ultimoAcesso) {
-        this.ultimoAcesso = ultimoAcesso;
-    }
-
 }
 
 
